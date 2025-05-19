@@ -39,10 +39,9 @@ export default function LocationList() {
     }, []);
 
     return (
-        
        <div className='mt-3.5'>
         <h1 className="text-3xl font-bold text-center">Địa Điểm Du Lịch, Độc Đáo </h1>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-36 pt-10">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-36 pt-10 pb-20">
             {locations.map((location) => (
                 <div
                     onClick={() => handleSearch(location)}
