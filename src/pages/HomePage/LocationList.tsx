@@ -39,20 +39,25 @@ export default function LocationList() {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        
+       <div className='mt-3.5'>
+        <h1 className="text-3xl font-bold text-center">Địa Điểm Du Lịch, Độc Đáo </h1>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-36 pt-10">
             {locations.map((location) => (
                 <div
                     onClick={() => handleSearch(location)}
                     key={location.id}
-                    className="cursor-pointer hover:shadow-lg rounded-lg overflow-hidden"
+                    className="cursor-pointer shadow-lg hover:shadow-xl/20 rounded-lg overflow-hidden"
                 >
                     <img src={location.hinhAnh} alt={location.tenViTri} className="w-full h-40 object-cover" />
                     <div className="p-3">
+                        <div className='text-[12px]'><i class="fa-solid fa-globe"></i><span className='ml-1.5'>{location.tenViTri},{location.tinhThanh}, {location.quocGia}</span></div>
                         <h3 className="text-lg font-semibold">{location.tenViTri}</h3>
                         <p className="text-sm text-gray-500">{location.tinhThanh}, {location.quocGia}</p>
                     </div>
                 </div>
             ))}
         </div>
+       </div>
     );
 };
