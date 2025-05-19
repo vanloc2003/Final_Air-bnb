@@ -50,7 +50,7 @@ export default function LocationList() {
                 >
                     <img src={location.hinhAnh} alt={location.tenViTri} className="w-full h-40 object-cover" />
                     <div className="p-3">
-                        <div className='text-[12px]'><i class="fa-solid fa-globe"></i><span className='ml-1.5'>{location.tenViTri},{location.tinhThanh}, {location.quocGia}</span></div>
+                        <div className='text-[12px]'><i className="fa-solid fa-globe"></i><span className='ml-1.5'>{location.tenViTri},{location.tinhThanh}, {location.quocGia}</span></div>
                         <h3 className="text-lg font-semibold">{location.tenViTri}</h3>
                         <p className="text-sm text-gray-500">{location.tinhThanh}, {location.quocGia}</p>
                     </div>
