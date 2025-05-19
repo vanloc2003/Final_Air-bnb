@@ -136,19 +136,19 @@ export default function AsideRoom() {
                         <h3 className="text-2xl font-semibold text-gray-800 mb-6">Thông tin thêm</h3>
                         <div className="space-y-4 text-sm">
                             <div className="flex items-center gap-3 text-gray-700">
-                                <span className="text-2xl text-blue-500"><i class="fa-solid fa-house-chimney"></i></span>
+                                <span className="text-2xl text-blue-500"><i className="fa-solid fa-house-chimney"></i></span>
                                 <span>Toàn bộ nhà — Bạn sẽ có chung cư cao cấp cho riêng mình.</span>
                             </div>
                             <div className="flex items-center gap-3 text-gray-700">
-                                <span className="text-2xl text-amber-800"><i class="fa-solid fa-broom-ball"></i></span>
+                                <span className="text-2xl text-amber-800"><i className="fa-solid fa-broom-ball"></i></span>
                                 <span>Vệ sinh tăng cường — Chủ nhà cam kết quy trình 5 bước của Airbnb.</span>
                             </div>
                             <div className="flex items-center gap-3 text-gray-700">
-                                <span className="text-2xl text-amber-300"><i class="fa-solid fa-star"></i></span>
+                                <span className="text-2xl text-amber-300"><i className="fa-solid fa-star"></i></span>
                                 <span>Phong là Chủ nhà siêu cấp — Được đánh giá cao và tận tâm phục vụ khách.</span>
                             </div>
                             <div className="flex items-center gap-3 text-gray-700">
-                                <span className="text-2xl text-green-500"><i class="fa-solid fa-recycle"></i></span>
+                                <span className="text-2xl text-green-500"><i className="fa-solid fa-recycle"></i></span>
                                 <span>Miễn phí hủy trong 48 giờ đầu tiên.</span>
                             </div>
                         </div>
