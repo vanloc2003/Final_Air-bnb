@@ -11,11 +11,13 @@ import dayjs, { Dayjs } from "dayjs";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { RootState } from "../../main";
+import RoomDetail from "./RoomDetail";
 
 export default function AsideRoom() {
   const { roomId } = useParams();
   const navigate = useNavigate();
 
+ 
   const [roomDetail, setRoomDetail] = useState<RoomDetailType | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [guestCount, setGuestCount] = useState(1);
@@ -85,98 +87,7 @@ export default function AsideRoom() {
         </div>
       </div>
 
-      {/* Ảnh vs Bảng giá convert */}
-      {/* <div className="w-full flex mb-15">
-       
-        <div className="w-60% relative right-2">
-          <img
-            src={roomDetail.hinhAnh}
-            alt={roomDetail.tenPhong}
-            className="w-60% h-full object-center rounded-xl shadow-2xl cursor-pointer hover:opacity-90 transition"
-            onClick={() => setIsModalOpen(true)}
-          />
-        </div>
-
-        <div className="w-45% md:w-1/3 bg-stone-100 p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300">
-          <div className="flex items-end gap-2 mb-6">
-            <span className="text-3xl font-bold text-gray-800">
-              ${roomDetail.giaTien}
-            </span>
-            <span className="text-gray-600">/ From</span>
-          </div>
-
-          <div className="border rounded-lg overflow-hidden mb-6">
-            <div className="grid grid-cols-2">
-              <div className="border-r p-4">
-                <div className="text-xs font-bold uppercase text-gray-600 mb-1">
-                  Nhận phòng
-                </div>
-                <DatePicker
-                  className="w-full"
-                  format="DD-MM-YYYY"
-                  value={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  disabledDate={(current) =>
-                    current && current < dayjs().startOf("day")
-                  }
-                />
-              </div>
-              <div className="p-4">
-                <div className="text-xs font-bold uppercase text-gray-600 mb-1">
-                  Trả phòng
-                </div>
-                <DatePicker
-                  className="w-full"
-                  format="DD-MM-YYYY"
-                  value={endDate}
-                  onChange={(date) => setEndDate(date)}
-                  disabledDate={(current) =>
-                    current && current < (startDate || dayjs()).startOf("day")
-                  }
-                />
-              </div>
-            </div>
-            <div className="border-t p-4">
-              <div className="text-xs font-bold uppercase text-gray-600 mb-1">
-                Khách
-              </div>
-              <InputNumber
-                min={1}
-                max={10}
-                value={guestCount}
-                onChange={(value) => setGuestCount(value || 1)}
-                className="w-full"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-4 text-gray-700 text-sm">
-            <div className="flex justify-between">
-              <span>
-                ${roomDetail.giaTien} x {calculateNights()} đêm
-              </span>
-              <span>${roomDetail.giaTien * calculateNights()}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Cleaning fee</span>
-              <span>$8</span>
-            </div>
-            <div className="border-t pt-4 flex justify-between font-semibold">
-              <span>Total</span>
-              <span>${calculateTotal()}</span>
-            </div>
-          </div>
-
-          <Button
-            onClick={handleBooking}
-            type="primary"
-            className="w-full mt-6 py-3 rounded-full bg-pink-500 hover:bg-pink-600"
-          >
-            Đặt phòng
-          </Button>
-        </div>
-      </div> */}
-
+  
       {/* Ảnh */}
       <div className="relative w-full mb-10">
         <img
@@ -205,6 +116,7 @@ export default function AsideRoom() {
         {/* Thông tin phòng */}
         <div className="flex-1">
           <div className=" text-black text-[15px] mb-6">
+            <h3 className="text-black text-xl font-bold mb-2">Toàn bộ căn hộ {roomDetail.tenPhong}</h3>
             <i className="fa-solid fa-user-tie text-blue-600"></i> {roomDetail.khach} khách • <i className="fa-solid fa-door-closed text-blue-600"></i> {roomDetail.phongNgu} phòng ngủ •{" "}
             <i className="fa-solid fa-bed text-blue-600"></i> {roomDetail.giuong} giường • <i className="fa-solid fa-bath text-blue-600"></i> {roomDetail.phongTam} phòng tắm
           </div>
