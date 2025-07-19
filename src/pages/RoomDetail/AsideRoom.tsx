@@ -87,7 +87,6 @@ export default function AsideRoom() {
         </div>
       </div>
 
-  
       {/* Ảnh */}
       <div className="relative w-full mb-10">
         <img

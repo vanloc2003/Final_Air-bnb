@@ -71,7 +71,6 @@ export default function BookingManager() {
         debouncedSearch(trimValue);
     };
 
-
     const columns: ColumnsType<BookedRooms> = [
         { title: 'ID', dataIndex: 'id', key: 'id' },
         { title: 'Mã phòng', dataIndex: 'maPhong', key: 'maPhong' },

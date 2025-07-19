@@ -238,7 +238,7 @@ export default function RoomManager() {
                     onChange={handleSearchChange}
                     className="w-full max-w-md"
                     suffix={isPending ? <Spin size="small" /> : null}
-                />
+                />  
             </div>
 
             <Table
