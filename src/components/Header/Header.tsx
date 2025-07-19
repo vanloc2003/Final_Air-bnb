@@ -175,7 +175,7 @@ const Header = () => {
       <div className="relative z-10 flex flex-col items-start justify-center h-full px-10 text-white">
         <div className="text-6xl font-extrabold text-blue-400 mb-2 flex items-center gap-2">
           <i className="fab fa-airbnb"></i>
-          airbnb
+          "WELCOME PJ MR.LOC"
         </div>
         <p className="text-2xl font-bold">Belong anywhere</p>
       </div>
