@@ -57,7 +57,7 @@ const Header = () => {
         <Link to={"/"}>
           <div className="text-2xl font-bold text-blue-400 flex items-center gap-2">
             <i className="text-3xl fab fa-airbnb"></i>
-            DANGVANLOC
+            airbnb
           </div>
         </Link>
         <CheckDesktop>
